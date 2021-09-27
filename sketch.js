@@ -13,6 +13,13 @@ var playerArrows = [];
 
 var arrow;
 
+var backgroundimg;
+
+function preload(){
+
+  backgroundimg=loadImage("./assets/background.gif");
+
+}
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
@@ -55,6 +62,8 @@ function setup() {
 
 function draw() {
   background(180);
+  
+  image(backgroundimg, 0, 0, width, height);
 
   Engine.update(engine);
 
